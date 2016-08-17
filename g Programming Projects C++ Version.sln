@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "000 - Name Generator", "000 - Name Generator\000 - Name Generator.vcxproj", "{12BC77A9-AF7B-4E64-94DF-BCF8361B2626}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12BC77A9-AF7B-4E64-94DF-BCF8361B2626}.Debug|Win32.ActiveCfg = Debug|Win32
+		{12BC77A9-AF7B-4E64-94DF-BCF8361B2626}.Debug|Win32.Build.0 = Debug|Win32
+		{12BC77A9-AF7B-4E64-94DF-BCF8361B2626}.Release|Win32.ActiveCfg = Release|Win32
+		{12BC77A9-AF7B-4E64-94DF-BCF8361B2626}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
