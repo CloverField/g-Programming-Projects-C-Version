@@ -17,7 +17,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	cout << "This program generates random names" << endl;
 
-	while (getline(fNameFile, line))
+	while (getline(fNameFile, line, '\r'))
 	{
 		numberOfLines++;
 	}
@@ -25,7 +25,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	string *fNames = new string[numberOfLines];
 	numberOfLines = 0;
 
-	while (getline(lNameFile, line))
+	while (getline(lNameFile, line, '\r'))
 	{
 		numberOfLines++;
 	}
