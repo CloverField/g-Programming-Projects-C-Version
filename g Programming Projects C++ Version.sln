@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "001a - Higher or Lower", "0
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "001b - Heads or Tails", "001b - Heads or Tails\001b - Heads or Tails.vcxproj", "{D37E92FC-27FC-46F1-BC2D-8245900A99F7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "002 - Temperature Converter", "002 - Temperature Converter\002 - Temperature Converter.vcxproj", "{F6AD62FC-5412-4F2A-9760-B350B9C4136B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -27,6 +29,10 @@ Global
 		{D37E92FC-27FC-46F1-BC2D-8245900A99F7}.Debug|Win32.Build.0 = Debug|Win32
 		{D37E92FC-27FC-46F1-BC2D-8245900A99F7}.Release|Win32.ActiveCfg = Release|Win32
 		{D37E92FC-27FC-46F1-BC2D-8245900A99F7}.Release|Win32.Build.0 = Release|Win32
+		{F6AD62FC-5412-4F2A-9760-B350B9C4136B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F6AD62FC-5412-4F2A-9760-B350B9C4136B}.Debug|Win32.Build.0 = Debug|Win32
+		{F6AD62FC-5412-4F2A-9760-B350B9C4136B}.Release|Win32.ActiveCfg = Release|Win32
+		{F6AD62FC-5412-4F2A-9760-B350B9C4136B}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
