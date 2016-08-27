@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "005 - FizzBuzz", "005 - Fiz
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "006a - Rock Paper Scissors", "006a - Rock Paper Scissors\006a - Rock Paper Scissors.vcxproj", "{FCC9CA7A-712B-4D2C-B3B2-02700EFB43FC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "007 - Hangman", "007 - Hangman\007 - Hangman.vcxproj", "{F7FE9B33-499B-42C7-9D8E-245CA156B631}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -57,6 +59,10 @@ Global
 		{FCC9CA7A-712B-4D2C-B3B2-02700EFB43FC}.Debug|Win32.Build.0 = Debug|Win32
 		{FCC9CA7A-712B-4D2C-B3B2-02700EFB43FC}.Release|Win32.ActiveCfg = Release|Win32
 		{FCC9CA7A-712B-4D2C-B3B2-02700EFB43FC}.Release|Win32.Build.0 = Release|Win32
+		{F7FE9B33-499B-42C7-9D8E-245CA156B631}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F7FE9B33-499B-42C7-9D8E-245CA156B631}.Debug|Win32.Build.0 = Debug|Win32
+		{F7FE9B33-499B-42C7-9D8E-245CA156B631}.Release|Win32.ActiveCfg = Release|Win32
+		{F7FE9B33-499B-42C7-9D8E-245CA156B631}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
