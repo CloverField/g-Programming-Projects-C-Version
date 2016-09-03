@@ -7,9 +7,15 @@
 
 #include "targetver.h"
 
-#include <stdio.h>
+#include <cstdio>
 #include <tchar.h>
-
+#include <iostream>
+#include <string>
+#include "Kid.h"
+#include "Monster.h"
+#include "Adult.h"
+#include "Party.h"
+#include "Board.h"
 
 
 // TODO: reference additional headers your program requires here
