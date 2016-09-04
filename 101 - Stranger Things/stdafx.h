@@ -15,6 +15,7 @@
 #include "Adult.h"
 #include "Party.h"
 #include "Board.h"
+#include "Party.h"
 
 
 // TODO: reference additional headers your program requires here

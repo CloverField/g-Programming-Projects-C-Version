@@ -27,3 +27,4 @@ public:
 	bool operator==(const Kid &other);
 	bool operator!=(const Kid &other);
 };
+

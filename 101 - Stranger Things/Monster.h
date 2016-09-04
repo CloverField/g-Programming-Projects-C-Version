@@ -2,9 +2,9 @@
 using namespace std;
 class Monster
 {
-public:
 	string name;
 	int hp;
+public:
 	Monster();
 	Monster(string);
 	string getName();
@@ -13,3 +13,4 @@ public:
 	bool operator!=(const Monster &other);
 	~Monster();
 };
+

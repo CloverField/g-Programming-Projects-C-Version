@@ -41,4 +41,13 @@ Board::~Board()
 	}
 }
 
-//TODO: Define Overloads Here
+bool Board::operator==(const Board &other)
+{
+	return ((boardSize == other.boardSize) && (campaignName == other.campaignName) && (board == other.board));
+}
+
+bool Board::operator!=(const Board &other)
+{
+	return !(*this == other);
+}
+

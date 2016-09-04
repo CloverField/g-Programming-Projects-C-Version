@@ -14,7 +14,9 @@ public:
 	Adult(string, int, int, string);
 	~Adult();
 	string getName();
-	void setName();
+	void setName(string);
+	int getHP();
+	void setHP(int);
 	bool operator==(const Adult &other);
 	bool operator!=(const Adult &other);
 };
