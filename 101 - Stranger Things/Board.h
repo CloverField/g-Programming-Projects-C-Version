@@ -1,15 +1,15 @@
 #pragma once
+#include "Piece.h"
 using namespace std;
 class Board
 {
-	enum Piece{ Empty, Kid, Adult, Monster };
 public:
 	Board();
 	Board(string);
 	Board(string, size_t, size_t);
-	Board(string, size_t, size_t, Board::Piece*);
+	Board(string s, size_t r, size_t c, Piece* b);
 	~Board();
-	Piece* createBoard(size_t,size_t);
+	Piece* createBoard(size_t, size_t);
 	void printBoard();
 	bool operator==(const Board &other);
 	bool operator!=(const Board &other);

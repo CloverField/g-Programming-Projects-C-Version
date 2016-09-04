@@ -29,7 +29,7 @@ Board::Board(string s, size_t r, size_t c, Piece* b)
 	board = b;
 }
 
-Board::Piece* Board::createBoard(size_t bRows, size_t bCols)
+Piece *Board::createBoard(size_t bRows, size_t bCols)
 {
 	Piece* b = new Piece[bRows*bCols]();
 	rows = bRows;
