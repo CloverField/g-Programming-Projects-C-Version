@@ -31,7 +31,7 @@ Monster::~Monster()
 
 bool Monster::operator==(const Monster &other)
 {
-	return ((name == other.name) && (hp == other.hp));
+	return ((name == other.name) && (hp == other.hp) && (locationOnBoard == other.locationOnBoard));
 }
 
 bool Monster::operator!=(const Monster &other)

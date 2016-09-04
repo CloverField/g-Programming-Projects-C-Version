@@ -28,7 +28,7 @@ void Kid::setReady()
 
 bool Kid::operator==(const Kid &other)
 {
-	return ((name == other.name) && (age == other.age) && (role == other.role) && (hp == other.hp) && (ready == other.ready));
+	return ((name == other.name) && (age == other.age) && (role == other.role) && (hp == other.hp) && (ready == other.ready) && (locationOnBoard == other.locationOnBoard));
 }
 
 bool Kid::operator!=(const Kid &other)

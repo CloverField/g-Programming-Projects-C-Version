@@ -61,7 +61,7 @@ void Adult::setLocationOnBoard(int l)
 
 bool Adult::operator==(const Adult &other)
 {
-	return ((name == other.name) && (age == other.age) && (hp == other.hp) && (role == other.role));
+	return ((name == other.name) && (age == other.age) && (hp == other.hp) && (role == other.role) && (locationOnBoard == other.locationOnBoard));
 }
 
 bool Adult::operator!=(const Adult &other)
