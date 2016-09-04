@@ -15,6 +15,16 @@ void Monster::setName(string s)
 	name = s;
 }
 
+int Monster::getHP()
+{
+	return hp;
+}
+
+void Monster::setHP(int h)
+{
+	hp = h;
+}
+
 Monster::~Monster()
 {
 }
@@ -28,4 +38,13 @@ bool Monster::operator!=(const Monster &other)
 {
 	return !(*this == other);
 }
-//TODO: Define overloads here
+
+int Monster::getLocationOnBoard()
+{
+	return locationOnBoard;
+}
+
+void Monster::setLocationOnBoard(int l)
+{
+	locationOnBoard = l;
+}

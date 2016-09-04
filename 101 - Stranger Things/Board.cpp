@@ -1,41 +1,57 @@
 #include "stdafx.h"
 #include "Board.h"
+using namespace std;
 
 Board::Board()
 {
-	board = NULL;
+	board = nullptr;
 }
 
 Board::Board(string s)
 {
 	campaignName = s;
-	board = NULL;
+	board = nullptr;
 }
 
-Board::Board(string s, size_t bs)
+Board::Board(string s, size_t r, size_t c)
 {
 	campaignName = s;
-	boardSize = bs;
-	board = NULL;
+	rows = r;
+	cols = c;
+	board = nullptr;
 }
 
-Board::Board(string s, size_t bs, Board* b)
+Board::Board(string s, size_t r, size_t c, Board::Piece* b)
 {
 	campaignName = s;
-	boardSize = bs;
+	rows = r;
+	cols = c;
 	board = b;
 }
 
-Board* Board::createBoard(size_t bSize)
+Board::Piece* Board::createBoard(size_t bRows, size_t bCols)
 {
-	Board* b = new Board[bSize];
-	boardSize = bSize;
+	Piece* b = new Piece[bRows*bCols]();
+	rows = bRows;
+	cols = bCols;
+	board = b;
 	return b;
+}
+
+void Board::printBoard()
+{
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			cout << board[i+j] << endl;
+		}
+	}
 }
 
 Board::~Board()
 {
-	if (board != NULL)
+	if (board != nullptr)
 	{
 		delete[] board;
 	}
@@ -43,7 +59,7 @@ Board::~Board()
 
 bool Board::operator==(const Board &other)
 {
-	return ((boardSize == other.boardSize) && (campaignName == other.campaignName) && (board == other.board));
+	return ((rows == other.rows) && (cols == other.cols) && (campaignName == other.campaignName) && (board == other.board));
 }
 
 bool Board::operator!=(const Board &other)

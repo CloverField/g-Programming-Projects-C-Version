@@ -7,6 +7,7 @@ class Adult
 	int age;
 	int hp;
 	string role;
+	int locationOnBoard;
 public:
 	Adult();
 	Adult(string);
@@ -17,6 +18,8 @@ public:
 	void setName(string);
 	int getHP();
 	void setHP(int);
+	int getLocationOnBoard();
+	void setLocationOnBoard(int);
 	bool operator==(const Adult &other);
 	bool operator!=(const Adult &other);
 };

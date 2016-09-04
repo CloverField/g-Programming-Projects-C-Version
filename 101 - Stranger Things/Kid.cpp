@@ -40,3 +40,13 @@ void Kid::printName()
 {
 	cout << name << endl;
 }
+
+int Kid::getLocationOnBoard()
+{
+	return locationOnBoard;
+}
+
+void Kid::setLocationOnBoard(int l)
+{
+	locationOnBoard = l;
+}

@@ -8,6 +8,7 @@ class Kid
 	string role;
 	int hp;
 	bool ready;
+	int locationOnBoard;
 public:
 	Kid();
 	Kid(string s){ name = s, ready = false; }
@@ -24,6 +25,8 @@ public:
 	void printStatus();
 	bool isReady();
 	void setReady();
+	int getLocationOnBoard();
+	void setLocationOnBoard(int);
 	bool operator==(const Kid &other);
 	bool operator!=(const Kid &other);
 };

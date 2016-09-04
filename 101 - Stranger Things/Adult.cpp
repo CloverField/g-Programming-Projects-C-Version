@@ -49,6 +49,16 @@ void Adult::setHP(int h)
 	hp = h;
 }
 
+int Adult::getLocationOnBoard()
+{
+	return locationOnBoard;
+}
+
+void Adult::setLocationOnBoard(int l)
+{
+	locationOnBoard = l;
+}
+
 bool Adult::operator==(const Adult &other)
 {
 	return ((name == other.name) && (age == other.age) && (hp == other.hp) && (role == other.role));
