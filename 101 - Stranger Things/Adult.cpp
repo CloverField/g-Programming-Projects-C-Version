@@ -4,17 +4,28 @@ using namespace std;
 
 Adult::Adult()
 {
+	ready = false;
 }
 
 Adult::Adult(string s)
 {
 	name = s;
+	ready = false;
 }
 
 Adult::Adult(string s, int a)
 {
 	name = s;
 	age = a;
+	ready = false;
+}
+
+Adult::Adult(string s, int a, int h)
+{
+	name = s;
+	age = a;
+	hp = h;
+	ready = false;
 }
 
 Adult::Adult(string s, int a, int h, string r)
@@ -23,6 +34,7 @@ Adult::Adult(string s, int a, int h, string r)
 	age = a;
 	hp = h;
 	role = r;
+	ready = false;
 }
 
 Adult::~Adult()
@@ -67,4 +79,9 @@ bool Adult::operator==(const Adult &other)
 bool Adult::operator!=(const Adult &other)
 {
 	return !(*this == other);
+}
+
+ostream& operator<<(ostream &strm, const Adult &a)
+{
+	return strm << "Name: " << a.name << endl << "Age: " << a.age << endl << "HP: " << a.hp << endl << "Role: " << a.role << "Location on board: " << a.locationOnBoard << endl;
 }

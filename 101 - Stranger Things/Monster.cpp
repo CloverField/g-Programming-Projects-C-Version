@@ -3,6 +3,20 @@
 
 Monster::Monster()
 {
+	ready = false;
+}
+
+Monster::Monster(string s)
+{
+	name = s;
+	ready = false;
+}
+
+Monster::Monster(string s, int h)
+{
+	name = s;
+	hp = h;
+	ready = false;
 }
 
 string Monster::getName()
@@ -47,4 +61,9 @@ int Monster::getLocationOnBoard()
 void Monster::setLocationOnBoard(int l)
 {
 	locationOnBoard = l;
+}
+
+ostream& operator<<(ostream &strm, const Monster &m)
+{
+	return strm << "Name: " << m.name << endl << "HP: " << m.hp << endl;
 }

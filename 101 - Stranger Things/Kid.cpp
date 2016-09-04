@@ -7,6 +7,36 @@ Kid::Kid()
 	ready = false;
 }
 
+Kid::Kid(string n)
+{
+	name = n;
+	ready = false;
+}
+
+Kid::Kid(string n, int a)
+{
+	name = n;
+	age = a;
+	ready = false;
+}
+
+Kid::Kid(string n, int a, string r)
+{
+	name = n;
+	age = a;
+	role = r;
+	ready = false;
+}
+
+Kid::Kid(string n, int a, string r, int h)
+{
+	name = n;
+	age = a;
+	role = r;
+	hp = h;
+	ready = false;
+}
+
 Kid::~Kid()
 {
 }
@@ -49,4 +79,9 @@ int Kid::getLocationOnBoard()
 void Kid::setLocationOnBoard(int l)
 {
 	locationOnBoard = l;
+}
+
+ostream& operator<<(ostream &strm, const Kid &k)
+{
+	return strm << "Name: " << k.name << endl << "Age: " << k.age << endl << "Role: " << k.role << endl << "Location on board: " << k.locationOnBoard << endl;
 }

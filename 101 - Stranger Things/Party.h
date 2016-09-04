@@ -4,9 +4,6 @@ using namespace std;
 template <class T> 
 class Party
 {
-	T* currentParty;
-	string name;
-	size_t partySize;
 public:
 	Party(){currentParty = nullptr};
 	Party(string s){ name = s, currentParty = nullptr; };
@@ -48,5 +45,12 @@ public:
 	};
 	bool operator==(const T &other){return (*this == other)};
 	bool operator!=(const T &other){return !(*this == other)};
+	friend ostream& operator<<(ostream &strm, const Party &p){
+		return strm << "Party Name: " << p.name << endl << "Party size: " << p.partySize << endl;
+	};
+private:
+	T* currentParty;
+	string name;
+	size_t partySize;
 };
 

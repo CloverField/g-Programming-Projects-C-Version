@@ -21,7 +21,7 @@ Board::Board(string s, size_t r, size_t c)
 	board = nullptr;
 }
 
-Board::Board(string s, size_t r, size_t c, Board::Piece* b)
+Board::Board(string s, size_t r, size_t c, Piece* b)
 {
 	campaignName = s;
 	rows = r;
@@ -67,3 +67,7 @@ bool Board::operator!=(const Board &other)
 	return !(*this == other);
 }
 
+ostream& operator<<(ostream &strm, const Board &b)
+{
+	return strm << "Campaign Name: " << b.campaignName << endl << "Rows: " << b.rows << endl << "Colums: " << b.cols << endl;
+}

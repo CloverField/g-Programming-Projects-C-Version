@@ -2,12 +2,10 @@
 using namespace std;
 class Monster
 {
-	string name;
-	int hp;
-	int locationOnBoard;
 public:
 	Monster();
 	Monster(string);
+	Monster(string, int);
 	string getName();
 	void setName(string);
 	int getHP();
@@ -17,5 +15,11 @@ public:
 	bool operator==(const Monster &other);
 	bool operator!=(const Monster &other);
 	~Monster();
+	friend ostream& operator<<(ostream&, const Monster&);
+private:
+	string name;
+	int hp;
+	bool ready;
+	int locationOnBoard;
 };
 

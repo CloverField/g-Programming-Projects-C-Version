@@ -3,20 +3,13 @@ using namespace std;
 
 class Kid
 {
-	string name;
-	int age;
-	string role;
-	int hp;
-	bool ready;
-	int locationOnBoard;
 public:
 	Kid();
-	Kid(string s){ name = s, ready = false; }
-	Kid(string s, int i){ name = s, age = i; }
-	Kid(string s, int i, string r){ name = s, age = i, role = r, ready = false; }
-	Kid(string s, int i, string r, int h){ name = s, age = i, role = r, hp = h, ready = false; }
+	Kid(string);
+	Kid(string, int);
+	Kid(string, int, string);
+	Kid(string, int, string, int);
 	~Kid();
-
 	string getName();
 	void setName();
 	int getHP();
@@ -29,5 +22,13 @@ public:
 	void setLocationOnBoard(int);
 	bool operator==(const Kid &other);
 	bool operator!=(const Kid &other);
+	friend ostream& operator<<(ostream&, const Kid&);
+private:
+	string name;
+	int age;
+	string role;
+	int hp;
+	bool ready;
+	int locationOnBoard;
 };
 
