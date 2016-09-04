@@ -8,3 +8,5 @@ Monster::Monster()
 Monster::~Monster()
 {
 }
+
+//TODO: Define overloads here

@@ -20,3 +20,5 @@ Adult::Adult(string s, int a)
 Adult::~Adult()
 {
 }
+
+//TODO: Define overloads here
