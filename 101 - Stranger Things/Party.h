@@ -2,14 +2,20 @@
 using namespace std;
 class Party
 {
-	Party* currentParty;
+	Kid* currentParty;
 	string partyName;
 	size_t partySize;
 public:
-
 	Party();
 	Party(string);
+	Party(string, size_t);
+	Party(string, size_t, Kid*);
+	Kid* getParty();
+	void setParty(Kid*);
+	void partyUp(Kid);
 	~Party();
-	Party* createParty(size_t);
+	Kid* createParty(size_t);
 	void partyUp();
+	bool operator==(const Party &other);
+	bool operator!=(const Party &other);
 };

@@ -12,5 +12,7 @@ public:
 	Board(string, size_t, Board*);
 	~Board();
 	Board* createBoard(size_t);
+	bool operator==(const Board &other);
+	bool operator!=(const Board &other);
 };
 

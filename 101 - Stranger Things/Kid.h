@@ -7,12 +7,13 @@ class Kid
 	int age;
 	string role;
 	int hp;
+	bool ready;
 public:
 	Kid();
-	Kid(string s){ name = s; }
+	Kid(string s){ name = s, ready = false; }
 	Kid(string s, int i){ name = s, age = i; }
-	Kid(string s, int i, string r){ name = s, age = i, role = r; }
-	Kid(string s, int i, string r, int h){ name = s, age = i, role = r, hp = h; }
+	Kid(string s, int i, string r){ name = s, age = i, role = r, ready = false; }
+	Kid(string s, int i, string r, int h){ name = s, age = i, role = r, hp = h, ready = false; }
 	~Kid();
 
 	string getName();
@@ -21,4 +22,8 @@ public:
 	void setHP();
 	void printName();
 	void printStatus();
+	bool isReady();
+	void setReady();
+	bool operator==(const Kid &other);
+	bool operator!=(const Kid &other);
 };

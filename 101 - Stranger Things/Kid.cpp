@@ -2,13 +2,9 @@
 #include "Kid.h"
 using namespace std;
 
-string name;
-int age;
-string party;
-int hp;
-
 Kid::Kid()
 {
+	ready = false;
 }
 
 Kid::~Kid()
@@ -18,6 +14,26 @@ Kid::~Kid()
 string Kid::getName()
 {
 	return name;
+}
+
+bool Kid::isReady()
+{
+	return ready;
+}
+
+void Kid::setReady()
+{
+	ready = true;
+}
+
+bool Kid::operator==(const Kid &other)
+{
+	return ((name == other.name) && (age == other.age) && (role == other.role) && (hp == other.hp) && (ready == other.ready));
+}
+
+bool Kid::operator!=(const Kid &other)
+{
+	return !(*this == other);
 }
 
 void Kid::printName()

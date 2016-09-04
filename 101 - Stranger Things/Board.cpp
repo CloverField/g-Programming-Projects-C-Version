@@ -1,10 +1,6 @@
 #include "stdafx.h"
 #include "Board.h"
 
-string campaignName;
-size_t boardSize;
-Board* board;
-
 Board::Board()
 {
 	board = NULL;

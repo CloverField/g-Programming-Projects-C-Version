@@ -9,5 +9,7 @@ public:
 	Monster(string);
 	string getName();
 	void setName(string);
+	bool operator==(const Monster &other);
+	bool operator!=(const Monster &other);
 	~Monster();
 };

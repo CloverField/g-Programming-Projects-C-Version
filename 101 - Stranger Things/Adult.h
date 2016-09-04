@@ -10,9 +10,12 @@ class Adult
 public:
 	Adult();
 	Adult(string);
-	Adult(string s, int a, int h, string r){ name = s, age = a, hp = h, role = r; };
+	Adult(string, int);
+	Adult(string, int, int, string);
 	~Adult();
 	string getName();
 	void setName();
+	bool operator==(const Adult &other);
+	bool operator!=(const Adult &other);
 };
 
