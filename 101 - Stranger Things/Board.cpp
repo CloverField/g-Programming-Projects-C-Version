@@ -44,8 +44,9 @@ void Board::printBoard()
 	{
 		for (size_t j = 0; j < cols; j++)
 		{
-			cout << board[i+j] << endl;
+			cout << board[i + j];
 		}
+		cout << endl;
 	}
 }
 
