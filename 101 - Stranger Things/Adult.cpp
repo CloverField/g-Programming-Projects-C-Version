@@ -85,3 +85,9 @@ ostream& operator<<(ostream &strm, const Adult &a)
 {
 	return strm << "Name: " << a.name << endl << "Age: " << a.age << endl << "HP: " << a.hp << endl << "Role: " << a.role << "Location on board: " << a.locationOnBoard << endl;
 }
+
+int Adult::attack()
+{
+	//TODO: Implement
+	return NULL;
+}

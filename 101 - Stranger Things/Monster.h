@@ -16,6 +16,7 @@ public:
 	bool operator!=(const Monster &other);
 	~Monster();
 	friend ostream& operator<<(ostream&, const Monster&);
+	int attack();
 private:
 	string name;
 	int hp;

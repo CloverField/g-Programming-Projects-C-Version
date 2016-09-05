@@ -67,3 +67,9 @@ ostream& operator<<(ostream &strm, const Monster &m)
 {
 	return strm << "Name: " << m.name << endl << "HP: " << m.hp << endl;
 }
+
+int Monster::attack()
+{
+	//TODO: Implement
+	return NULL;
+}

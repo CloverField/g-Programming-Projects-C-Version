@@ -85,3 +85,9 @@ ostream& operator<<(ostream &strm, const Kid &k)
 {
 	return strm << "Name: " << k.name << endl << "Age: " << k.age << endl << "Role: " << k.role << endl << "Location on board: " << k.locationOnBoard << endl;
 }
+
+int Kid::attack()
+{
+	//TODO: Implement
+	return NULL;
+}

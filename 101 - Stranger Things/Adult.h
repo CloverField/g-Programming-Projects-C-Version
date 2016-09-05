@@ -19,6 +19,7 @@ public:
 	bool operator==(const Adult &other);
 	bool operator!=(const Adult &other);
 	friend ostream& operator<<(ostream &strm, const Adult &a);
+	int attack();
 private:
 	string name;
 	int age;

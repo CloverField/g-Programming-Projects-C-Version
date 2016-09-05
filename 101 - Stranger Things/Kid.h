@@ -23,6 +23,7 @@ public:
 	bool operator==(const Kid &other);
 	bool operator!=(const Kid &other);
 	friend ostream& operator<<(ostream&, const Kid&);
+	int attack();
 private:
 	string name;
 	int age;
