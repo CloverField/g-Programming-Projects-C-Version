@@ -88,6 +88,12 @@ ostream& operator<<(ostream &strm, const Kid &k)
 
 int Kid::attack()
 {
-	//TODO: Implement
+	if (hp < 0)
+	{
+		random_device rd;
+		mt19937 gen{ rd() };
+		uniform_int_distribution<int> dis(hp / 2, hp);
+		return dis(gen);
+	}
 	return NULL;
 }

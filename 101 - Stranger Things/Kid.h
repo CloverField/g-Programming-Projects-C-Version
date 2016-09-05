@@ -24,6 +24,7 @@ public:
 	bool operator!=(const Kid &other);
 	friend ostream& operator<<(ostream&, const Kid&);
 	int attack();
+	bool canAttack(size_t, Board);
 private:
 	string name;
 	int age;

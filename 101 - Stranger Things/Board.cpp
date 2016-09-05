@@ -70,5 +70,23 @@ bool Board::operator!=(const Board &other)
 
 ostream& operator<<(ostream &strm, const Board &b)
 {
-	return strm << "Campaign Name: " << b.campaignName << endl << "Rows: " << b.rows << endl << "Colums: " << b.cols << endl;
+	return strm << "Campaign Name: " << b.campaignName << endl << "Rows: " << b.rows << endl << "Columns: " << b.cols << endl;
+}
+
+void Board::setPiece(Piece p, int pos)
+{
+	board[pos] = p;
+}
+
+void Board::removePiece(int pos)
+{
+	board[pos] = Piece::Empty;
+}
+
+void Board::initializeBoard()
+{
+	for (size_t i = 0; i < rows*cols; i++)
+	{
+		board[i] = Piece::Empty;
+	}
 }

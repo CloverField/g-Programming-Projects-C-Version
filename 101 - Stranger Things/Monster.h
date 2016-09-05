@@ -1,5 +1,6 @@
 #pragma once
 using namespace std;
+
 class Monster
 {
 public:
@@ -17,6 +18,7 @@ public:
 	~Monster();
 	friend ostream& operator<<(ostream&, const Monster&);
 	int attack();
+	bool canAttack(size_t, Board);
 private:
 	string name;
 	int hp;

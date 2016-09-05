@@ -18,6 +18,7 @@ public:
 	void setLocationOnBoard(int);
 	bool operator==(const Adult &other);
 	bool operator!=(const Adult &other);
+	bool canAttack(size_t, Board);
 	friend ostream& operator<<(ostream &strm, const Adult &a);
 	int attack();
 private:

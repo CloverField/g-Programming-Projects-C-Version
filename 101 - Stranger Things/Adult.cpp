@@ -88,6 +88,17 @@ ostream& operator<<(ostream &strm, const Adult &a)
 
 int Adult::attack()
 {
-	//TODO: Implement
+	if (hp < 0)
+	{
+		random_device rd;
+		mt19937 gen{ rd() };
+		uniform_int_distribution<int> dis(hp / 2, hp);
+		return dis(gen);
+	}
 	return NULL;
+}
+
+bool Adult::canAttack(size_t bSize, Board b)
+{
+	return false;
 }

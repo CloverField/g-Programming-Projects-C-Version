@@ -1,5 +1,4 @@
 #pragma once
-#include "Piece.h"
 using namespace std;
 class Board
 {
@@ -11,6 +10,9 @@ public:
 	~Board();
 	Piece* createBoard(size_t, size_t);
 	void printBoard();
+	void setPiece(Piece, int);
+	void removePiece(int);
+	void initializeBoard();
 	bool operator==(const Board &other);
 	bool operator!=(const Board &other);
 	friend ostream& operator<<(ostream&, const Board&);

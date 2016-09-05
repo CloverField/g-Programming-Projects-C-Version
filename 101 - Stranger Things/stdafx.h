@@ -5,18 +5,18 @@
 
 #pragma once
 
-#include "targetver.h"
 #include <cstdio>
 #include <tchar.h>
 #include <iostream>
 #include <string>
+#include <random>
+#include "targetver.h"
+#include "Party.h"
+#include "Piece.h"
+#include "Board.h"
 #include "Kid.h"
 #include "Monster.h"
 #include "Adult.h"
-#include "Party.h"
-#include "Board.h"
-#include "Party.h"
-#include "Piece.h"
 
 
 // TODO: reference additional headers your program requires here
