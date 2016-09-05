@@ -45,7 +45,7 @@ Monster::~Monster()
 
 bool Monster::operator==(const Monster &other)
 {
-	return ((name == other.name) && (hp == other.hp) && (locationOnBoard == other.locationOnBoard));
+	return ((name == other.name) && (hp == other.hp) && (position == other.position));
 }
 
 bool Monster::operator!=(const Monster &other)
@@ -53,14 +53,14 @@ bool Monster::operator!=(const Monster &other)
 	return !(*this == other);
 }
 
-int Monster::getLocationOnBoard()
+Position Monster::getPosition()
 {
-	return locationOnBoard;
+	return position;
 }
 
-void Monster::setLocationOnBoard(int l)
+void Monster::setPosition(Position p)
 {
-	locationOnBoard = l;
+	position = p;
 }
 
 ostream& operator<<(ostream &strm, const Monster &m)
@@ -78,4 +78,22 @@ int Monster::attack()
 		return dis(gen);
 	}
 	return NULL;
+}
+
+bool Monster::canAttack(Board b)
+{
+	for (size_t row = -1; row < 2; row++)
+	{
+		for (size_t col = -1; col < 2; col++)
+		{
+			if (!(((position.x - row) + (position.y - col)) < 0) && ((position.x - row) + (position.y - col) > b.getBoardSize()))
+			{
+				if ((b.getBoard()[((position.x - row) + (position.y - col))] == (Piece::Adult)) || (b.getBoard()[((position.x - row) + (position.y - col))] == (Piece::Kid)))
+				{
+					return true;
+				}
+			}
+		}
+	}
+	return false;
 }

@@ -58,7 +58,7 @@ void Kid::setReady()
 
 bool Kid::operator==(const Kid &other)
 {
-	return ((name == other.name) && (age == other.age) && (role == other.role) && (hp == other.hp) && (ready == other.ready) && (locationOnBoard == other.locationOnBoard));
+	return ((name == other.name) && (age == other.age) && (role == other.role) && (hp == other.hp) && (ready == other.ready) && (position == other.position));
 }
 
 bool Kid::operator!=(const Kid &other)
@@ -71,19 +71,19 @@ void Kid::printName()
 	cout << name << endl;
 }
 
-int Kid::getLocationOnBoard()
+Position Kid::getPosition()
 {
-	return locationOnBoard;
+	return position;
 }
 
-void Kid::setLocationOnBoard(int l)
+void Kid::setPosition(Position p)
 {
-	locationOnBoard = l;
+	position = p;
 }
 
 ostream& operator<<(ostream &strm, const Kid &k)
 {
-	return strm << "Name: " << k.name << endl << "Age: " << k.age << endl << "Role: " << k.role << endl << "Location on board: " << k.locationOnBoard << endl;
+	return strm << "Name: " << k.name << endl << "Age: " << k.age << endl << "Role: " << k.role << endl << "Location on board: " << k.position << endl;
 }
 
 int Kid::attack()
@@ -96,4 +96,22 @@ int Kid::attack()
 		return dis(gen);
 	}
 	return NULL;
+}
+
+bool Kid::canAttack(Board b)
+{
+	for (size_t row = -1; row < 2; row++)
+	{
+		for (size_t col = -1; col < 2; col++)
+		{
+			if (!(((position.x - row) + (position.y - col)) < 0) && ((position.x - row) + (position.y - col) > b.getBoardSize()))
+			{
+				if (b.getBoard()[((position.x - row) + (position.y - col))] == (Piece::Monster))
+				{
+					return true;
+				}
+			}
+		}
+	}
+	return false;
 }

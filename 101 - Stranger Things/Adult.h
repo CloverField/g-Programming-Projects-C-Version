@@ -14,11 +14,11 @@ public:
 	void setName(string);
 	int getHP();
 	void setHP(int);
-	int getLocationOnBoard();
-	void setLocationOnBoard(int);
+	Position getPosition();
+	void setPosition(Position);
 	bool operator==(const Adult &other);
 	bool operator!=(const Adult &other);
-	bool canAttack(size_t, Board);
+	bool canAttack(Board);
 	friend ostream& operator<<(ostream &strm, const Adult &a);
 	int attack();
 private:
@@ -27,6 +27,6 @@ private:
 	int hp;
 	string role;
 	bool ready;
-	int locationOnBoard;
+	Position position;
 };
 

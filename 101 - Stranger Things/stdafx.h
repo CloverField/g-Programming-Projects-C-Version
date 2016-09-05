@@ -14,6 +14,7 @@
 #include "Party.h"
 #include "Piece.h"
 #include "Board.h"
+#include "Position.h"
 #include "Kid.h"
 #include "Monster.h"
 #include "Adult.h"

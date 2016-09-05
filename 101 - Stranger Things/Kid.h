@@ -18,19 +18,19 @@ public:
 	void printStatus();
 	bool isReady();
 	void setReady();
-	int getLocationOnBoard();
-	void setLocationOnBoard(int);
+	Position getPosition();
+	void setPosition(Position);
 	bool operator==(const Kid &other);
 	bool operator!=(const Kid &other);
 	friend ostream& operator<<(ostream&, const Kid&);
 	int attack();
-	bool canAttack(size_t, Board);
+	bool canAttack(Board);
 private:
 	string name;
 	int age;
 	string role;
 	int hp;
 	bool ready;
-	int locationOnBoard;
+	Position position;
 };
 

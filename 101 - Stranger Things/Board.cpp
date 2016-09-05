@@ -90,3 +90,13 @@ void Board::initializeBoard()
 		board[i] = Piece::Empty;
 	}
 }
+
+Piece* Board::getBoard()
+{
+	return board;
+}
+
+size_t Board::getBoardSize()
+{
+	return (rows*cols);
+}

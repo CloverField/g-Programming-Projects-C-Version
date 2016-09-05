@@ -1,5 +1,6 @@
 #pragma once
 using namespace std;
+
 class Board
 {
 public:
@@ -15,6 +16,8 @@ public:
 	void initializeBoard();
 	bool operator==(const Board &other);
 	bool operator!=(const Board &other);
+	Piece* getBoard();
+	size_t getBoardSize();
 	friend ostream& operator<<(ostream&, const Board&);
 private:
 	string campaignName;

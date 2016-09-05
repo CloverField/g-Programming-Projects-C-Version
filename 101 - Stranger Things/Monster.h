@@ -11,18 +11,18 @@ public:
 	void setName(string);
 	int getHP();
 	void setHP(int);
-	int getLocationOnBoard();
-	void setLocationOnBoard(int);
+	Position getPosition();
+	void setPosition(Position);
 	bool operator==(const Monster &other);
 	bool operator!=(const Monster &other);
 	~Monster();
 	friend ostream& operator<<(ostream&, const Monster&);
 	int attack();
-	bool canAttack(size_t, Board);
+	bool canAttack(Board);
 private:
 	string name;
 	int hp;
 	bool ready;
-	int locationOnBoard;
+	Position position;
 };
 
