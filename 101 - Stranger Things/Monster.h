@@ -1,5 +1,4 @@
-#ifndef Monster_H
-#define Monster_H
+#pragma once
 using namespace std;
 
 class Monster
@@ -29,4 +28,4 @@ private:
 	bool ready;
 	Position position;
 };
-#endif
+

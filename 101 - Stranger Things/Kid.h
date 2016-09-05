@@ -1,5 +1,4 @@
-#ifndef Kid_H
-#define Kid_H
+#pragma once
 using namespace std;
 
 class Kid
@@ -35,4 +34,4 @@ private:
 	bool ready;
 	Position position;
 };
-#endif
+
