@@ -21,6 +21,9 @@ public:
 	bool canAttack(Board);
 	friend ostream& operator<<(ostream &strm, const Adult &a);
 	int attack();
+	void move(int, int);
+	bool isReady();
+	void setReady();
 private:
 	string name;
 	int age;

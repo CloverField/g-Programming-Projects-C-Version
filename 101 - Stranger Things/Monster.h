@@ -19,6 +19,9 @@ public:
 	friend ostream& operator<<(ostream&, const Monster&);
 	int attack();
 	bool canAttack(Board);
+	void move(int, int);
+	bool isReady();
+	void setReady();
 private:
 	string name;
 	int hp;

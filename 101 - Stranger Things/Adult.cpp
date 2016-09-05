@@ -115,3 +115,19 @@ bool Adult::canAttack(Board b)
 	}
 	return false;
 }
+
+bool Adult::isReady()
+{
+	return ready;
+}
+
+void Adult::setReady()
+{
+	ready = true;
+}
+
+void Adult::move(int x, int y)
+{
+	position.x = x;
+	position.y = y;
+}

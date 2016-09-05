@@ -115,3 +115,9 @@ bool Kid::canAttack(Board b)
 	}
 	return false;
 }
+
+void Kid::move(int x, int y)
+{
+	position.x = x;
+	position.y = y;
+}

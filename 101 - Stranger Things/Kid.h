@@ -25,6 +25,7 @@ public:
 	friend ostream& operator<<(ostream&, const Kid&);
 	int attack();
 	bool canAttack(Board);
+	void move(int, int);
 private:
 	string name;
 	int age;

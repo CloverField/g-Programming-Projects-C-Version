@@ -97,3 +97,19 @@ bool Monster::canAttack(Board b)
 	}
 	return false;
 }
+
+bool Monster::isReady()
+{
+	return ready;
+}
+
+void Monster::setReady()
+{
+	ready = true;
+}
+
+void Monster::move(int x, int y)
+{
+	position.x = x;
+	position.y = y;
+}
