@@ -1,4 +1,5 @@
-#pragma once
+#ifndef Adult_H
+#define Adult_H
 using namespace std;
 
 class Adult
@@ -32,4 +33,4 @@ private:
 	bool ready;
 	Position position;
 };
-
+#endif

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef Position_H
+#define Position_H
 class Position
 {
 public:
@@ -13,4 +14,4 @@ public:
 	};
 	~Position(){ if ((x != NULL) && (y != NULL)){ x = NULL; y = NULL; }; }
 };
-
+#endif

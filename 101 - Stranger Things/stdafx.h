@@ -3,7 +3,8 @@
 // are changed infrequently
 //
 
-#pragma once
+#ifndef stdafx_H
+#define stdafx_H
 
 #include <cstdio>
 #include <tchar.h>
@@ -19,5 +20,6 @@
 #include "Monster.h"
 #include "Adult.h"
 
+#endif
 
 // TODO: reference additional headers your program requires here
