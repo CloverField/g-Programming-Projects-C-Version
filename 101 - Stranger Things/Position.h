@@ -1,4 +1,5 @@
-#pragma once
+#ifndef POSITION_H
+#define POSITION_H
 using namespace std;
 
 class Position
@@ -15,4 +16,4 @@ public:
 	};
 	~Position(){ if ((x != NULL) && (y != NULL)){ x = NULL; y = NULL; }; }
 };
-
+#endif

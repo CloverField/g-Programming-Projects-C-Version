@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TARGETVER_H
+#define TARGETVER_H
 
 // Including SDKDDKVer.h defines the highest available Windows platform.
 
@@ -7,3 +8,4 @@
 
 #include <SDKDDKVer.h>
 
+#endif

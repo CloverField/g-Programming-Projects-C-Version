@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BOARD_H
+#define BOARD_H
 using namespace std;
 
 class Board
@@ -25,4 +26,4 @@ private:
 	size_t cols;
 	Piece* board;
 };
-
+#endif
