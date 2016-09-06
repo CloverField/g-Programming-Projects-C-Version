@@ -1,3 +1,5 @@
+#ifndef Party_H
+#define Party_H
 #pragma once
 using namespace std;
 
@@ -53,4 +55,4 @@ private:
 	string name;
 	size_t partySize;
 };
-
+#endif
