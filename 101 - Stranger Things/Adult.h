@@ -1,5 +1,3 @@
-#ifndef Adult_H
-#define Adult_H
 #pragma once
 using namespace std;
 
@@ -34,4 +32,4 @@ private:
 	bool ready;
 	Position position;
 };
-#endif
+

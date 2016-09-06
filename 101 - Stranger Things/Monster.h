@@ -1,5 +1,3 @@
-#ifndef Monster_H
-#define Monster_H
 #pragma once
 using namespace std;
 
@@ -30,4 +28,4 @@ private:
 	bool ready;
 	Position position;
 };
-#endif
+

@@ -1,5 +1,3 @@
-#ifndef Board_H
-#define Board_H
 #pragma once
 using namespace std;
 
@@ -27,4 +25,4 @@ private:
 	size_t cols;
 	Piece* board;
 };
-#endif
+
