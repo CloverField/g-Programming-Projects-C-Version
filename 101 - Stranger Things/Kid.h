@@ -12,9 +12,11 @@ public:
 	Kid(string, int, string, int);
 	~Kid();
 	string getName();
-	void setName();
+	void setName(string);
 	int getHP();
 	void setHP();
+	int getAge();
+	void setAge(int);
 	void printName();
 	void printStatus();
 	bool isReady();

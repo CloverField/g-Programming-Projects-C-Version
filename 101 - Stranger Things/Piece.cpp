@@ -2,15 +2,15 @@
 #include "Piece.h"
 using namespace std;
 
-ostream& operator<<(ostream& os, Piece p)
+ostream& operator<<(ostream& strm, Piece p)
 {
 	switch (p)
 	{
-	case Piece::Empty: os << "[ ]";    break;
-	case Piece::Kid: os << "[K]"; break;
-	case Piece::Adult: os << "[A]";  break;
-	case Piece::Monster: os << "[M]";   break;
-	default: os.setstate(std::ios_base::failbit);
+	case Piece::Empty: strm << "[ ]";    break;
+	case Piece::Kid: strm << "[K]"; break;
+	case Piece::Adult: strm << "[A]";  break;
+	case Piece::Monster: strm << "[M]";   break;
+	default: strm.setstate(std::ios_base::failbit);
 	}
-	return os;
+	return strm;
 }

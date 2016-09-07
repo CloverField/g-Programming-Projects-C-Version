@@ -6,16 +6,33 @@ Monster::Monster()
 	ready = false;
 }
 
-Monster::Monster(string s)
+Monster::Monster(string n)
 {
-	name = s;
+	name = n;
 	ready = false;
 }
 
-Monster::Monster(string s, int h)
+Monster::Monster(string n, int h)
 {
-	name = s;
+	name = n;
 	hp = h;
+	ready = false;
+}
+
+Monster::Monster(string n, int h, string r)
+{
+	name = n;
+	hp = h;
+	role = r;
+	ready = false;
+}
+
+Monster::Monster(string n, int h, string r, int a)
+{
+	name = n;
+	hp = h;
+	role = r;
+	age = a;
 	ready = false;
 }
 
@@ -65,7 +82,7 @@ void Monster::setPosition(Position p)
 
 ostream& operator<<(ostream &strm, const Monster &m)
 {
-	return strm << "Name: " << m.name << endl << "HP: " << m.hp << endl;
+	return strm << "Name: " << m.name << endl << "Age: " << m.age << endl << "HP: " << m.hp << endl << "Role: " << m.role << endl << "Location on Board: " << m.position;
 }
 
 int Monster::attack()
@@ -106,6 +123,16 @@ bool Monster::isReady()
 void Monster::setReady()
 {
 	ready = true;
+}
+
+int Monster::getAge()
+{
+	return age;
+}
+
+void Monster::setAge(int a)
+{
+	age = a;
 }
 
 void Monster::move(int x, int y)

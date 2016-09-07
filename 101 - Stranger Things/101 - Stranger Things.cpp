@@ -18,7 +18,7 @@ string makeTextStrange(string s)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	cout << "Creating party" << endl;
-	Kid k = Kid("Will");
+	Test().runTests();
+	system("pause");
 	return 0;
 }

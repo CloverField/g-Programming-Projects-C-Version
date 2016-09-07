@@ -7,30 +7,30 @@ Adult::Adult()
 	ready = false;
 }
 
-Adult::Adult(string s)
+Adult::Adult(string n)
 {
-	name = s;
+	name = n;
 	ready = false;
 }
 
-Adult::Adult(string s, int a)
+Adult::Adult(string n, int a)
 {
-	name = s;
+	name = n;
 	age = a;
 	ready = false;
 }
 
-Adult::Adult(string s, int a, int h)
+Adult::Adult(string n, int a, string r)
 {
-	name = s;
+	name = n;
 	age = a;
-	hp = h;
+	role = r;
 	ready = false;
 }
 
-Adult::Adult(string s, int a, int h, string r)
+Adult::Adult(string n, int a, string r, int h)
 {
-	name = s;
+	name = n;
 	age = a;
 	hp = h;
 	role = r;
@@ -61,6 +61,16 @@ void Adult::setHP(int h)
 	hp = h;
 }
 
+int Adult::getAge()
+{
+	return age;
+}
+
+void Adult::setAge(int a)
+{
+	age = a;
+}
+
 Position Adult::getPosition()
 {
 	return position;
@@ -69,6 +79,16 @@ Position Adult::getPosition()
 void Adult::setPosition(Position p)
 {
 	position = p;
+}
+
+bool Adult::isReady()
+{
+	return ready;
+}
+
+void Adult::setReady()
+{
+	ready = true;
 }
 
 bool Adult::operator==(const Adult &other)
@@ -83,7 +103,7 @@ bool Adult::operator!=(const Adult &other)
 
 ostream& operator<<(ostream &strm, const Adult &a)
 {
-	return strm << "Name: " << a.name << endl << "Age: " << a.age << endl << "HP: " << a.hp << endl << "Role: " << a.role << "Location on board: " << a.position << endl;
+	return strm << "Name: " << a.name << endl << "Age: " << a.age << endl << "HP: " << a.hp << endl << "Role: " << a.role << endl <<"Location on board: " << a.position;
 }
 
 int Adult::attack()
@@ -116,15 +136,6 @@ bool Adult::canAttack(Board b)
 	return false;
 }
 
-bool Adult::isReady()
-{
-	return ready;
-}
-
-void Adult::setReady()
-{
-	ready = true;
-}
 
 void Adult::move(int x, int y)
 {

@@ -46,6 +46,21 @@ string Kid::getName()
 	return name;
 }
 
+void Kid::setName(string n)
+{
+	name = n;
+}
+
+int Kid::getAge()
+{
+	return age;
+}
+
+void Kid::setAge(int a)
+{
+	age = a;
+}
+
 bool Kid::isReady()
 {
 	return ready;
@@ -83,7 +98,7 @@ void Kid::setPosition(Position p)
 
 ostream& operator<<(ostream &strm, const Kid &k)
 {
-	return strm << "Name: " << k.name << endl << "Age: " << k.age << endl << "Role: " << k.role << endl << "Location on board: " << k.position << endl;
+	return strm << "Name: " << k.name << endl << "Age: " << k.age << endl << "HP: " << k.hp << endl << "Role: " << k.role << endl << "Location on board: " << k.position;
 }
 
 int Kid::attack()

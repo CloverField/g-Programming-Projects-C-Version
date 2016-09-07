@@ -38,6 +38,17 @@ Piece *Board::createBoard(size_t bRows, size_t bCols)
 	return b;
 }
 
+void Board::setBoard(Piece p)
+{
+	for (size_t i = 0; i < rows; i++)
+	{
+		for (size_t j = 0; j < cols; j++)
+		{
+			board[i + j] = p;
+		}
+	}
+}
+
 void Board::printBoard()
 {
 	for (size_t i = 0; i < rows; i++)
@@ -48,6 +59,7 @@ void Board::printBoard()
 		}
 		cout << endl;
 	}
+	cout << endl;
 }
 
 Board::~Board()

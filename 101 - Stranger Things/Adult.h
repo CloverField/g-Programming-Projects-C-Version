@@ -8,19 +8,21 @@ public:
 	Adult();
 	Adult(string);
 	Adult(string, int);
-	Adult(string, int, int);
-	Adult(string, int, int, string);
+	Adult(string, int, string);
+	Adult(string, int, string, int);
 	~Adult();
 	string getName();
 	void setName(string);
 	int getHP();
 	void setHP(int);
+	int getAge();
+	void setAge(int);
+	bool operator==(const Adult&);
+	bool operator!=(const Adult&);
+	friend ostream& operator<<(ostream &strm, const Adult &a);
 	Position getPosition();
 	void setPosition(Position);
-	bool operator==(const Adult &other);
-	bool operator!=(const Adult &other);
 	bool canAttack(Board);
-	friend ostream& operator<<(ostream &strm, const Adult &a);
 	int attack();
 	void move(int, int);
 	bool isReady();
@@ -28,8 +30,8 @@ public:
 private:
 	string name;
 	int age;
-	int hp;
 	string role;
+	int hp;
 	bool ready;
 	Position position;
 };

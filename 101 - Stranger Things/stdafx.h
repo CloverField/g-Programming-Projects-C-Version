@@ -19,6 +19,7 @@
 #include "Kid.h"
 #include "Monster.h"
 #include "Adult.h"
+#include "Test.h"
 
 
 // TODO: reference additional headers your program requires here
