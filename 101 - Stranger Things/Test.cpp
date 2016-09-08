@@ -49,13 +49,34 @@ void Test::testPositionClass()
 
 void Test::testPartyClass()
 {
-	Party<Kid> pKid = Party<Kid>("Test",4);
-	//pKid.createParty(4);
+	Party<Kid> pKid = Party<Kid>("TestKid", 4);
+	pKid.createParty();
 	pKid.partyUp(Kid("Test", 8, "Test", 10));
 	pKid.partyUp(Kid("Test2", 8, "Test2", 10));
 	pKid.partyUp(Kid("Test3", 8, "Test3", 10));
-	pKid.partyUp(Kid("Test", 8, "Test", 10));
+	pKid.partyUp(Kid("Test4", 8, "Test4", 10));
 	cout << pKid << endl;
+	pKid.disbandParty();
+	cout << pKid << endl;
+	Party<Adult> pAdult = Party<Adult>("TestAdult", 4);
+	pAdult.createParty();
+	pAdult.partyUp(Adult("Test", 8, "Test", 10));
+	pAdult.partyUp(Adult("Test2", 8, "Test2", 10));
+	pAdult.partyUp(Adult("Test3", 8, "Test3", 10));
+	pAdult.partyUp(Adult("Test", 8, "Test", 10));
+	cout << pAdult << endl;
+	pAdult.disbandParty();
+	cout << pAdult << endl;
+	Party<Monster> pMonster = Party<Monster>("TestMonster", 4);
+	pMonster.createParty();
+	pMonster.partyUp(Monster("Test", 8, "Test", 10));
+	pMonster.partyUp(Monster("Test2", 8, "Test2", 10));
+	pMonster.partyUp(Monster("Test3", 8, "Test3", 10));
+	pMonster.partyUp(Monster("Test4", 8, "Test4", 10));
+	cout << pMonster << endl;
+	pMonster.disbandParty();
+	cout << pMonster << endl;
+	
 }
 
 void Test::runBasicTests()

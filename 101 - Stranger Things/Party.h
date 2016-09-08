@@ -7,12 +7,14 @@ template <class T>
 class Party
 {
 public:
-	Party(){currentParty = nullptr};
+	Party(){ currentParty = nullptr; }
 	Party(string s){ name = s, currentParty = nullptr; };
 	Party(string s, size_t i){ name = s, partySize = i, currentParty = nullptr; }
 	Party(string s, size_t i, T* t){ name = s, partySize = i, currentParty = t; }
-	T* getParty(){ return currentParty; };
-	void setParty(T* t){currentParty = t};
+	T* getParty(){ return currentParty; }
+	void setParty(T* t){ currentParty = t; }
+	T getName(){ return name; }
+	void setName(T n){ name = n; }
 	bool partyUp(T t){
 		if (currentParty == nullptr)
 			return false;
@@ -23,7 +25,7 @@ public:
 			return true;
 		}
 		return false;
-	};
+	}
 	~Party(){
 		if (currentParty != nullptr)
 		{
@@ -35,7 +37,7 @@ public:
 		partySize = t;
 		currentParty = party;
 		return party;
-	};
+	}
 	T* createParty(){
 		if (partySize != NULL)
 		{
@@ -44,13 +46,23 @@ public:
 		}
 		return currentParty;
 	};
+	void disbandParty(){
+		if (currentParty != nullptr)
+		{
+			delete[] currentParty;
+			currentParty = nullptr;
+		}
+		partySize = 0;
+		currentPos = 0;
+	}
 	bool operator==(const Party &other){ return ((currentParty == other.currentParty) && (name == other.name) && (partySize == other.partySize)); }
 	bool operator!=(const Party &other){ return !(*this == other); }
 	friend ostream& operator<<(ostream &strm, const Party &p){
-		strm << "Party Name: " << p.name << endl << "Party size: " << p.partySize << endl << "Party Members: \n\n";
+		strm << "Party Name: " << p.name << endl << "Party size: " << p.partySize << endl;
 		//TODO: Fix this
 		if (p.currentParty != nullptr)
 		{
+			strm << "Party Members: \n\n";
 			for (size_t i = 0; i < p.partySize; i++)
 			{
 				if (i != p.partySize - 1)
