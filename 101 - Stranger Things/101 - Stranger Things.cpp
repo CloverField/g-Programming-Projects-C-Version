@@ -10,7 +10,7 @@ string makeTextStrange(string s)
 	{
 		if (s[i] != ' ')
 		{
-			s[i] = (char((int)s[i] + 1));
+			s[i] = (char((int)s[i] + rand() % 27 + 1));
 		}
 	}
 	return s;
@@ -19,6 +19,7 @@ string makeTextStrange(string s)
 int _tmain(int argc, _TCHAR* argv[])
 {
 	Test().runAllTests();
+	cout << "Strange Text Test: " << makeTextStrange("Test") << endl;
 	system("pause");
 	return 0;
 }

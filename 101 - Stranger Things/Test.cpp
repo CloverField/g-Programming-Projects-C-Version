@@ -76,7 +76,6 @@ void Test::testPartyClass()
 	cout << pMonster << endl;
 	pMonster.disbandParty();
 	cout << pMonster << endl;
-	
 }
 
 void Test::runBasicTests()
@@ -96,6 +95,8 @@ void Test::rundAdvancedTests()
 	_ASSERT(pKid.getParty() == nullptr);
 	pKid.createParty();
 	_ASSERT(pKid.getParty() != nullptr);
+	pKid.disbandParty();
+	_ASSERT(pKid.getParty() == nullptr);
 }
 
 void Test::runAllTests()
