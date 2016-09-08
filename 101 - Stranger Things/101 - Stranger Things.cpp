@@ -18,7 +18,7 @@ string makeTextStrange(string s)
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	Test().runTests();
+	Test().runAllTests();
 	system("pause");
 	return 0;
 }

@@ -9,7 +9,7 @@ using namespace std;
 string encypt(string s)
 {
 	string encyptedString;
-	for (int i = 0; i < s.length(); i++)
+	for (size_t i = 0; i < s.length(); i++)
 	{
 		char c = s[i];
 		encyptedString += ((char)((int)c + 1));
@@ -20,7 +20,7 @@ string encypt(string s)
 string decrypt(string s)
 {
 	string decryptedString;
-	for (int i = 0; i < s.length(); i++)
+	for (size_t i = 0; i < s.length(); i++)
 	{
 		char c = s[i];
 		decryptedString += ((char)((int)c - 1));

@@ -10,18 +10,17 @@ public:
 	Party(){currentParty = nullptr};
 	Party(string s){ name = s, currentParty = nullptr; };
 	Party(string s, size_t i){ name = s, partySize = i, currentParty = nullptr; };
-	Party(string s, size_t i, T* t){name = s, partySize = i, currentParty = t};
+	Party(string s, size_t i, T* t){ name = s, partySize = i, currentParty = t; }
 	T* getParty(){ return currentParty; };
 	void setParty(T* t){currentParty = t};
-	//TODO: Fix this
 	bool partyUp(T t){
-		for (size_t i = 0; i < partySize; i++)
+		if (currentParty == nullptr)
+			return false;
+		if (currentPos < partySize)
 		{
-			if (currentParty[i] == T())
-			{
-				currentParty[i] = t;
-				return true;
-			}
+			currentParty[currentPos] = t;
+			currentPos++;
+			return true;
 		}
 		return false;
 	};
@@ -40,11 +39,21 @@ public:
 	bool operator==(const Party &other){ return ((currentParty == other.currentParty) && (name == other.name) && (partySize == other.partySize)); }
 	bool operator!=(const Party &other){ return !(*this == other); }
 	friend ostream& operator<<(ostream &strm, const Party &p){
-		return strm << "Party Name: " << p.name << endl << "Party size: " << p.partySize << endl;
+		strm << "Party Name: " << p.name << endl << "Party size: " << p.partySize << endl << "Party Members: ";
+		//TODO: Fix this
+		if (p.currentParty != nullptr)
+		{
+			for (size_t i = 0; i < p.partySize; i++)
+			{
+				strm << p.currentParty[i] << endl;
+			}
+		}
+		return strm;
 	};
 private:
 	T* currentParty;
 	string name;
 	size_t partySize;
+	size_t currentPos = 0;
 };
 #endif

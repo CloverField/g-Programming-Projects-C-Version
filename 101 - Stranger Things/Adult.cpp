@@ -120,11 +120,11 @@ int Adult::attack()
 
 bool Adult::canAttack(Board b)
 {
-	for (size_t row = -1; row < 2; row++)
+	for (int row = -1; row < 2; row++)
 	{
-		for (size_t col = -1; col < 2; col++)
+		for (int col = -1; col < 2; col++)
 		{
-			if (!(((position.x - row) + (position.y - col)) < 0) && ((position.x - row) + (position.y - col) > b.getBoardSize()))
+			if (!(((position.x - row) + (position.y - col)) < 0) && ((position.x - row) + (position.y - col) > (int)b.getBoardSize()))
 			{
 				if (b.getBoard()[((position.x - row) + (position.y - col))] == (Piece::Monster))
 				{

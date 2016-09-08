@@ -13,6 +13,7 @@ public:
 	void testPieceClass();
 	void testBoardClass();
 	void testPartyClass();
-	void runTests();
+	void runBasicTests();
+	void runAllTests();
 };
 #endif
