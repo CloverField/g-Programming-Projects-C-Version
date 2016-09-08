@@ -39,13 +39,16 @@ public:
 	bool operator==(const Party &other){ return ((currentParty == other.currentParty) && (name == other.name) && (partySize == other.partySize)); }
 	bool operator!=(const Party &other){ return !(*this == other); }
 	friend ostream& operator<<(ostream &strm, const Party &p){
-		strm << "Party Name: " << p.name << endl << "Party size: " << p.partySize << endl << "Party Members: ";
+		strm << "Party Name: " << p.name << endl << "Party size: " << p.partySize << endl << "Party Members: \n\n";
 		//TODO: Fix this
 		if (p.currentParty != nullptr)
 		{
 			for (size_t i = 0; i < p.partySize; i++)
 			{
-				strm << p.currentParty[i] << endl;
+				if (i != p.partySize - 1)
+					strm << p.currentParty[i] << endl;
+				else
+					strm << p.currentParty[i];
 			}
 		}
 		return strm;

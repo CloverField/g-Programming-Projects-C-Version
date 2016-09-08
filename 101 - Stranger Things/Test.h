@@ -12,6 +12,7 @@ public:
 	void testMonsterClass();
 	void testPieceClass();
 	void testBoardClass();
+	void testPositionClass();
 	void testPartyClass();
 	void runBasicTests();
 	void runAllTests();

@@ -39,15 +39,23 @@ void Test::testPieceClass()
 	cout << p << "\n" << endl;
 }
 
+void Test::testPositionClass()
+{
+	Position p = Position();
+	cout << p << endl;
+	Position p1 = Position(2, 3);
+	cout << p1 << endl;
+}
+
 void Test::testPartyClass()
 {
-	Party<Kid> pInt = Party<Kid>("Test",4);
-	//pInt.createParty(4);
-	pInt.partyUp(Kid("Test", 8, "Test", 10));
-	pInt.partyUp(Kid("Test2", 8, "Test2", 10));
-	pInt.partyUp(Kid("Test3", 8, "Test3", 10));
-	pInt.partyUp(Kid("Test", 8, "Test", 10));
-	cout << pInt << endl;
+	Party<Kid> pKid = Party<Kid>("Test",4);
+	pKid.createParty(4);
+	pKid.partyUp(Kid("Test", 8, "Test", 10));
+	pKid.partyUp(Kid("Test2", 8, "Test2", 10));
+	pKid.partyUp(Kid("Test3", 8, "Test3", 10));
+	pKid.partyUp(Kid("Test", 8, "Test", 10));
+	cout << pKid << endl;
 }
 
 void Test::runBasicTests()
@@ -57,6 +65,7 @@ void Test::runBasicTests()
 	testMonsterClass();
 	testPieceClass();
 	testBoardClass();
+	testPositionClass();
 	testPartyClass();
 }
 
