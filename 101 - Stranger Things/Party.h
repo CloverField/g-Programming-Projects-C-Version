@@ -9,7 +9,7 @@ class Party
 public:
 	Party(){currentParty = nullptr};
 	Party(string s){ name = s, currentParty = nullptr; };
-	Party(string s, size_t i){ name = s, partySize = i, currentParty = nullptr; };
+	Party(string s, size_t i){ name = s, partySize = i, currentParty = nullptr; }
 	Party(string s, size_t i, T* t){ name = s, partySize = i, currentParty = t; }
 	T* getParty(){ return currentParty; };
 	void setParty(T* t){currentParty = t};
@@ -35,6 +35,14 @@ public:
 		partySize = t;
 		currentParty = party;
 		return party;
+	};
+	T* createParty(){
+		if (partySize != NULL)
+		{
+			T* party = new T[partySize]();
+			currentParty = party;
+		}
+		return currentParty;
 	};
 	bool operator==(const Party &other){ return ((currentParty == other.currentParty) && (name == other.name) && (partySize == other.partySize)); }
 	bool operator!=(const Party &other){ return !(*this == other); }

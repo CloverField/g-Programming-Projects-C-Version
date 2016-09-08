@@ -50,7 +50,7 @@ void Test::testPositionClass()
 void Test::testPartyClass()
 {
 	Party<Kid> pKid = Party<Kid>("Test",4);
-	pKid.createParty(4);
+	//pKid.createParty(4);
 	pKid.partyUp(Kid("Test", 8, "Test", 10));
 	pKid.partyUp(Kid("Test2", 8, "Test2", 10));
 	pKid.partyUp(Kid("Test3", 8, "Test3", 10));
@@ -69,9 +69,18 @@ void Test::runBasicTests()
 	testPartyClass();
 }
 
+void Test::rundAdvancedTests()
+{
+	Party<Kid> pKid = Party<Kid>("Test", 4);
+	_ASSERT(pKid.getParty() == nullptr);
+	pKid.createParty();
+	_ASSERT(pKid.getParty() != nullptr);
+}
+
 void Test::runAllTests()
 {
 	runBasicTests();
+	rundAdvancedTests();
 }
 
 Test::~Test()
