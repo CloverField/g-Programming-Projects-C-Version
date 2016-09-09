@@ -19,6 +19,7 @@
 #include "Kid.h"
 #include "Monster.h"
 #include "Adult.h"
+#include "HelperFunctions.h"
 #include "Test.h"
 
 

@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClInclude Include="Adult.h" />
     <ClInclude Include="Board.h" />
+    <ClInclude Include="HelperFunctions.h" />
     <ClInclude Include="Kid.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Piece.h" />
@@ -94,6 +95,7 @@
     <ClCompile Include="101 - Stranger Things.cpp" />
     <ClCompile Include="Adult.cpp" />
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="Kid.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Piece.cpp" />
