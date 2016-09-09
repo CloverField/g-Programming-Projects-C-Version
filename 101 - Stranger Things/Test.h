@@ -15,7 +15,7 @@ public:
 	void testPositionClass();
 	void testPartyClass();
 	void runBasicTests();
-	void rundAdvancedTests();
+	void runAdvancedTests();
 	void runAllTests();
 };
 #endif

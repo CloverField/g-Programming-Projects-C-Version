@@ -89,7 +89,7 @@ void Test::runBasicTests()
 	testPartyClass();
 }
 
-void Test::rundAdvancedTests()
+void Test::runAdvancedTests()
 {
 	Party<Kid> pKid = Party<Kid>("Test", 4);
 	_ASSERT(pKid.getParty() == nullptr);
@@ -102,7 +102,7 @@ void Test::rundAdvancedTests()
 void Test::runAllTests()
 {
 	runBasicTests();
-	rundAdvancedTests();
+	runAdvancedTests();
 }
 
 Test::~Test()
